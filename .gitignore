@@ -1,0 +1,21 @@
+# Home Assistant sensitive files
+secrets.yaml
+*.db
+*.db-shm
+*.db-wal
+
+# Home Assistant generated files
+home-assistant_v2.db
+home-assistant.log
+home-assistant.log.1
+home-assistant.log.fault
+OZW_Log.txt
+
+# Backups
+*.tar.gz
+backups/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
