@@ -1,0 +1,55 @@
+# Home Assistant Configuration
+# https://www.home-assistant.io/docs/configuration/
+
+homeassistant:
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: !secret elevation
+  unit_system: metric
+  currency: USD
+  country: US
+  time_zone: !secret time_zone
+
+# Enable the frontend
+frontend:
+  themes: !include_dir_merge_named themes/
+
+# Enable configuration UI
+config:
+
+# Enable Home Assistant Cloud
+cloud:
+
+# Enable HTTP
+http:
+  # Uncomment to enable SSL (recommended for remote access)
+  # ssl_certificate: /ssl/fullchain.pem
+  # ssl_key: /ssl/privkey.pem
+
+# Allows you to issue voice commands from the frontend
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+# Sensors
+sensor: !include sensors.yaml
+
+# Automations
+automation: !include automations.yaml
+
+# Scripts
+script: !include scripts.yaml
+
+# Scenes
+scene: !include scenes.yaml
